@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <title>New website!</title>
+     <link rel="stylesheet" href="style2.css">
+
+
+</head>
+<body bgcolor="#a3c2c2">
+
+  <!--navigation bar starts-->
+  <nav class="navbar navbar-expand-lg  bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Show<b>Trackr</b></a>
+
+        <a class="nav-link active"  href="index.html">Home</a>
+        <a class="nav-link active"  href="add.html">Add</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav m-auto my-2 my-lg-0">
+          </ul>
+          <form class="d-flex">
+            <ul class="navbar-nav m-auto my-4 my-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active"  href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign up</a>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--Navigation bar ends-->
+  <form>
+  <div class="services">
+    <div class="container">
+     <div class="card"
+     <h2> ADD TV SHOW </h2>
+
+
+ <div class="card-body">
+   <div class="col">
+<form class="form" method="post" ng-submit="addShow()" name="addForm">
+       <h3> Name </h3>
+       <div class="form-group" ng-class="{ 'has-sucess': addForm.showName.$valid && addForm.showName.$dirty, 'has-error': addForm.showName.$invalid && addForm.showName.$dirty }">
+       <input class="form-control" type="text" placeholder="Enter TV show name" aria-label="default input example" pattern="[A-Za-z]+[A-Za-z0-9]+" style>
+
+
+       <br>
+         </div>
+       <p id="demo">
+        <button type="submit" class="btn btn-primary btn-sm" ng-disabled="addForm.$invalid"> Add </button>
+      </p>
+
+
+  </div>
+ </div>
+</div>
+</form>
+
+
+
+
+
+
+       
+
+  <script >
+     document.querySelector('form').addEventListener('submit', handleSubmitForm);
+
+     // Event Handlers
+     function handleSubmitForm(e) {
+         e.preventDefault();
+
+
+         var input = document.querySelector('input');
+         if (input.value != ''){document.getElementById("demo").innerHTML = ( input.value + " has been added");}
+         else {document.getElementById("demo").innerHTML = "Please Enter Show Name";}
+     }
+
+
+
+       </script>
+
+
+
+</body>
+</html>
